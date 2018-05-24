@@ -2,7 +2,8 @@ This is a walk through note for the data flow, 2018/05/24. Contact info: weihua1
 
 ### platform: multiple vms
 
-To check system healthiness, go to http://192.168.7.8:8500.
+To check system healthiness with chassis manager, go to http://192.168.7.8:8500
+To monitor the data flow with Kibana, go to http://192.168.7.11:5601
 
 ### platform: personal vm, single machine
 VMWare, CentOS. 192.168.7.114.
