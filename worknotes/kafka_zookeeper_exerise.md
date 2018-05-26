@@ -1,9 +1,9 @@
 ## Zookeeper
 
-https://zookeeper.apache.org
-[Quick Guide](https://www.tutorialspoint.com/zookeeper/zookeeper_quick_guide.htm)
-[Getting Started Guide](https://zookeeper.apache.org/doc/r3.3.3/zookeeperStarted.html)
-[More Insights](http://www.corejavaguru.com/bigdata/zookeeper/interview-questions-part-1.php)
+[Apache Zookeeper](https://zookeeper.apache.org) <br />
+[Quick Guide](https://www.tutorialspoint.com/zookeeper/zookeeper_quick_guide.htm) <br />
+[Getting Started Guide](https://zookeeper.apache.org/doc/r3.3.3/zookeeperStarted.html) <br />
+[More Insights](http://www.corejavaguru.com/bigdata/zookeeper/interview-questions-part-1.php) <br />
 
 ```
 brew install zookeeper
@@ -15,8 +15,8 @@ zookeeper running on: localhost:2181(127.0.0.1:2181). Config info: /usr/local/et
 
 ## Kafka
 
-https://kafka.apache.org
-[Quick Start](https://kafka.apache.org/quickstart)
+[Apache Kafka](https://kafka.apache.org) <br />
+[Quick Start](https://kafka.apache.org/quickstart) <br />
 
 ```
 brew install kafka
