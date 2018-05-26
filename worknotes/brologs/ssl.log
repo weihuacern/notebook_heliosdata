@@ -1,0 +1,14 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	ssl
+#open	2018-05-25-17-20-35
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	version	cipher	curve	server_name	resumed	last_alert	next_protocol	established	cert_chain_fuids	client_cert_chain_fuids	subject	issuer	client_subject	client_issuer
+#types	time	string	addr	port	addr	port	string	string	string	string	bool	string	string	bool	vector[string]	vector[string]	string	string	string	string
+1527293090.577826	C3mWQb3oujONDX0tOa	192.168.7.129	49441	107.152.24.199	443	TLSv12	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384	secp256r1	riverbed11.app.box.com	F	-	-	T	FustPsS2AEsXmVRW7,F9zarl3AVWklsBPYu2	(empty)	CN=*.app.box.com,O=Box\\, Inc.,L=Redwood City,ST=California,C=US	CN=GeoTrust RSA CA 2018,OU=www.digicert.com,O=DigiCert Inc,C=US	-	-
+1527293090.577569	C4oyfzliVhKUVobSk	192.168.7.129	49440	107.152.24.199	443	TLSv12	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384	secp256r1	riverbed11.app.box.com	F	-	-	T	Fcninp1K5zhZs5LGg2,FCPEDD1m1Mjxo9n7Q7	(empty)	CN=*.app.box.com,O=Box\\, Inc.,L=Redwood City,ST=California,C=US	CN=GeoTrust RSA CA 2018,OU=www.digicert.com,O=DigiCert Inc,C=US	-	-
+1527293091.234044	CrdGLy1NTli79ZQEC5	192.168.7.129	49442	104.16.27.3	443	TLSv12	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256	x25519	cdn01.boxcdn.net	F	-	h2	T	FHNORP3fpHHOQrdS2k,Fs04sf1nEAiCD6gjd7	(empty)	CN=cdn01.boxcdn.net,O=Box\\, Inc.,L=Redwood City,ST=California,C=US	CN=GeoTrust RSA CA 2018,OU=www.digicert.com,O=DigiCert Inc,C=US	-	-
+1527293091.234763	CqA38g1AMKhb0qRose	192.168.7.129	49443	104.16.27.3	443	TLSv12	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256	x25519	cdn01.boxcdn.net	F	-	h2	T	FmQyCt42ASx9KKoeQ7,F6gFo531UC01CRg9E9	(empty)	CN=cdn01.boxcdn.net,O=Box\\, Inc.,L=Redwood City,ST=California,C=US	CN=GeoTrust RSA CA 2018,OU=www.digicert.com,O=DigiCert Inc,C=US	-	-
+1527293091.234994	Cdjr0B6alU5U6cvI2	192.168.7.129	49444	104.16.27.3	443	TLSv12	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256	x25519	cdn01.boxcdn.net	F	-	h2	T	F9PZwT2A9ggHhRLaXe,FFTRCf4QJHQ1j1zgci	(empty)	CN=cdn01.boxcdn.net,O=Box\\, Inc.,L=Redwood City,ST=California,C=US	CN=GeoTrust RSA CA 2018,OU=www.digicert.com,O=DigiCert Inc,C=US	-	-
+#close	2018-05-25-17-20-35

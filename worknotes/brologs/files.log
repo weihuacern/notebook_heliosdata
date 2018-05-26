@@ -1,0 +1,19 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2018-05-25-17-20-35
+#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+1527293090.592118	FustPsS2AEsXmVRW7	107.152.24.199	192.168.7.129	C3mWQb3oujONDX0tOa	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1530	-	0	0	F	-	74e23f691fc236584be06f6d26a60993	b7f4cf05ae3d7b89bb6c7bd55878e187bfa322c3	-	-	-	-
+1527293090.592118	F9zarl3AVWklsBPYu2	107.152.24.199	192.168.7.129	C3mWQb3oujONDX0tOa	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1167	-	0	0	F	-	a95d7f13a64a5ebe00364d8be67deced	7ccc2a87e3949f20572b18482980505fa90cac3b	-	-	-	-
+1527293090.592221	Fcninp1K5zhZs5LGg2	107.152.24.199	192.168.7.129	C4oyfzliVhKUVobSk	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1530	-	0	0	F	-	74e23f691fc236584be06f6d26a60993	b7f4cf05ae3d7b89bb6c7bd55878e187bfa322c3	-	-	-	-
+1527293090.592221	FCPEDD1m1Mjxo9n7Q7	107.152.24.199	192.168.7.129	C4oyfzliVhKUVobSk	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1167	-	0	0	F	-	a95d7f13a64a5ebe00364d8be67deced	7ccc2a87e3949f20572b18482980505fa90cac3b	-	-	-	-
+1527293091.246394	FHNORP3fpHHOQrdS2k	104.16.27.3	192.168.7.129	CrdGLy1NTli79ZQEC5	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1534	-	0	0	F	-	f9a97bf4fac2e627f2e68359eaf984bd	6cc4b1e4ed4e492e82b49fd60f6237995950b2e6	-	-	-	-
+1527293091.246394	Fs04sf1nEAiCD6gjd7	104.16.27.3	192.168.7.129	CrdGLy1NTli79ZQEC5	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1167	-	0	0	F	-	a95d7f13a64a5ebe00364d8be67deced	7ccc2a87e3949f20572b18482980505fa90cac3b	-	-	-	-
+1527293091.255683	FmQyCt42ASx9KKoeQ7	104.16.27.3	192.168.7.129	CqA38g1AMKhb0qRose	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1534	-	0	0	F	-	f9a97bf4fac2e627f2e68359eaf984bd	6cc4b1e4ed4e492e82b49fd60f6237995950b2e6	-	-	-	-
+1527293091.255683	F6gFo531UC01CRg9E9	104.16.27.3	192.168.7.129	CqA38g1AMKhb0qRose	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1167	-	0	0	F	-	a95d7f13a64a5ebe00364d8be67deced	7ccc2a87e3949f20572b18482980505fa90cac3b	-	-	-	-
+1527293091.261156	F9PZwT2A9ggHhRLaXe	104.16.27.3	192.168.7.129	Cdjr0B6alU5U6cvI2	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1534	-	0	0	F	-	f9a97bf4fac2e627f2e68359eaf984bd	6cc4b1e4ed4e492e82b49fd60f6237995950b2e6	-	-	-	-
+1527293091.261156	FFTRCf4QJHQ1j1zgci	104.16.27.3	192.168.7.129	Cdjr0B6alU5U6cvI2	SSL	0	MD5,X509,SHA1	application/pkix-cert	-	0.000000	-	F	1167	-	0	0	F	-	a95d7f13a64a5ebe00364d8be67deced	7ccc2a87e3949f20572b18482980505fa90cac3b	-	-	-	-
+#close	2018-05-25-17-20-35

@@ -1,0 +1,89 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2018-05-25-17-20-35
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+1527292926.901423	CVFoPc2RvagH8Ej0g9	fe80::145e:196b:b1cc:39a2	5353	ff02::fb	5353	udp	0	-	hp officejet pro 8710 [854e33]._ipps._tcp.local	32769	qclass-32769	33	SRV	-	-	F	F	F	F	0	-	-	F
+1527292931.508737	CyqPXi3AxX8AENG9fk	192.168.7.122	5353	224.0.0.251	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	1	C_INTERNET	33	SRV	-	-	F	F	F	F	0	-	-	F
+1527292931.510358	CXl09T1bRX366A6MC2	fe80::8638:35ff:fe59:e74	5353	ff02::fb	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	1	C_INTERNET	33	SRV	-	-	F	F	F	F	0	-	-	F
+1527292931.817352	C77F8s3fLkW2Swaukg	192.168.7.73	5353	224.0.0.251	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	hp48ba4e854e33.local	120.000000	F
+1527292931.820631	ChyHuUV3UQULHoLqe	fe80::4aba:4eff:fe85:4e36	5353	ff02::fb	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	hp48ba4e854e33.local	120.000000	F
+1527292940.112635	CFBcS9132KCFVJ45ai	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292941.340736	CFBcS9132KCFVJ45ai	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292943.183998	CFBcS9132KCFVJ45ai	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_homekit._tcp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292944.107133	CFBcS9132KCFVJ45ai	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_homekit._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292944.111525	CFBcS9132KCFVJ45ai	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292940.111011	CLsV6NudVPE8JbCQc	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292941.339044	CLsV6NudVPE8JbCQc	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292943.182298	CLsV6NudVPE8JbCQc	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_homekit._tcp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292944.105459	CLsV6NudVPE8JbCQc	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_homekit._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292944.108892	CLsV6NudVPE8JbCQc	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292964.075207	CurR3m2gEVfrBe9ri6	fe80::c3:7876:c853:1e85	5353	ff02::fb	5353	udp	0	-	_companion-link._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	hongyuan\xe2\x80\x99s macbook pro._companion-link._tcp.local,TXT 20 model=MacBookPro11\x2c3 TXT 10 osxvers=17	4500.000000,4500.000000	F
+1527292964.996117	CQrICh1btRXFqA68lf	fe80::145e:196b:b1cc:39a2	5353	ff02::fb	5353	udp	0	-	_adisk._tcp.local	1	C_INTERNET	12	PTR	0	NOERROR	T	F	F	F	0	TXT 22 rpBA=49:32:78:A7:74:56 TXT 11 rpVr=140.31,wilfred\xe2\x80\x99s macbook pro._companion-link._tcp.local,TXT 20 model=MacBookPro10\x2c1 TXT 10 osxvers=17	4500.000000,4500.000000,4500.000000	F
+1527292974.516792	C6nu031ypQrAsFOtba	192.168.7.81	5353	224.0.0.251	5353	udp	0	-	_adisk._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292963.765879	CCOelk3OvC8Yej7qKk	192.168.7.75	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292964.690284	CCOelk3OvC8Yej7qKk	192.168.7.75	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292967.761479	CCOelk3OvC8Yej7qKk	192.168.7.75	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292963.768921	ClXvDB2DS0kOY5HLcb	fe80::c64:eb95:360:905a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292964.693461	ClXvDB2DS0kOY5HLcb	fe80::c64:eb95:360:905a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292967.764433	ClXvDB2DS0kOY5HLcb	fe80::c64:eb95:360:905a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292970.526936	C3ABxv3HD4WrU82dog	fe80::c2a:fa3:97:616a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292974.524365	C3ABxv3HD4WrU82dog	fe80::c2a:fa3:97:616a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292971.755747	C8rnQH3HexUf6FdWR8	192.168.7.74	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292974.521417	C8rnQH3HexUf6FdWR8	192.168.7.74	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292995.601676	CdHUuI1T1H6mb08kA3	192.168.7.129	17271	192.168.7.254	53	udp	12252	0.009405	clients4.google.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	clients.l.google.com,172.217.12.46	125.000000,125.000000	F
+1527292995.601815	CjOVVaKBfwOWO7138	192.168.7.129	37810	192.168.7.254	53	udp	28808	0.009321	clients4.google.com	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	0	clients.l.google.com,2607:f8b0:4000:815::200e	140.000000,140.000000	F
+1527292984.348864	Cz1X049qfgdJ6kAWa	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292985.272045	Cz1X049qfgdJ6kAWa	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292987.113488	Cz1X049qfgdJ6kAWa	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_homekit._tcp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292988.035276	Cz1X049qfgdJ6kAWa	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_homekit._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292988.342569	Cz1X049qfgdJ6kAWa	fe80::4e:2fac:ef32:e27c	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292984.346944	CMukp225wQy368Dyb6	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292985.269734	CMukp225wQy368Dyb6	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292988.033214	CMukp225wQy368Dyb6	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_homekit._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527292988.340690	CMukp225wQy368Dyb6	192.168.7.67	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293052.545153	CjwDuQ3IlfQtMIPTDa	192.168.7.122	5353	224.0.0.251	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	32769	qclass-32769	33	SRV	-	-	F	F	F	F	0	-	-	F
+1527293052.546899	CwhlNe1OTjFjoHzmV6	fe80::8638:35ff:fe59:e74	5353	ff02::fb	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	32769	qclass-32769	33	SRV	-	-	F	F	F	F	0	-	-	F
+1527293059.616027	CwhlNe1OTjFjoHzmV6	fe80::8638:35ff:fe59:e74	5353	ff02::fb	5353	udp	0	-	hp officejet pro 8710 [854e33]._ipp._tcp.local	32769	qclass-32769	33	SRV	-	-	F	F	F	F	0	-	-	F
+1527293052.857108	C43l1O1wEA3gBftFMj	fe80::4aba:4eff:fe85:4e36	5353	ff02::fb	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	hp48ba4e854e33.local	120.000000	F
+1527293059.929294	C43l1O1wEA3gBftFMj	fe80::4aba:4eff:fe85:4e36	5353	ff02::fb	5353	udp	0	-	hp officejet pro 8710 [854e33]._printer._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	hp48ba4e854e33.local,hp48ba4e854e33.local,hp48ba4e854e33.local,hp48ba4e854e33.local,hp48ba4e854e33.local,hp48ba4e854e33.local	120.000000,120.000000,120.000000,120.000000,120.000000,120.000000	F
+1527293052.853661	CKVU1D32hQS6GPuQIf	192.168.7.73	5353	224.0.0.251	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	hp48ba4e854e33.local	120.000000	F
+1527293059.922676	CKVU1D32hQS6GPuQIf	192.168.7.73	5353	224.0.0.251	5353	udp	0	-	hp officejet pro 8710 [854e33]._printer._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	hp48ba4e854e33.local,hp48ba4e854e33.local,hp48ba4e854e33.local,hp48ba4e854e33.local,hp48ba4e854e33.local,hp48ba4e854e33.local	120.000000,120.000000,120.000000,120.000000,120.000000,120.000000	F
+1527293090.544430	C5Q97S2sXfP8GXmmMl	192.168.7.129	24147	192.168.7.254	53	udp	24272	0.017169	riverbed11.app.box.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	107.152.24.199	60.000000	F
+1527293090.544491	CFBw8clumKDCzEFa3	192.168.7.129	65193	192.168.7.254	53	udp	44113	-	riverbed11.app.box.com	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	F	0	-	-	F
+1527293091.210484	Cpczhn1YOW4QhVZvce	192.168.7.129	13932	192.168.7.254	53	udp	59179	0.007892	cdn01.boxcdn.net	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	cdn01.boxcdn.net.cdn.cloudflare.net,104.16.27.3,104.16.26.3	20.000000,290.000000,290.000000	F
+1527293091.210542	Cb7bTA33lF10HqJB57	192.168.7.129	35794	192.168.7.254	53	udp	54228	0.014570	cdn01.boxcdn.net	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	0	cdn01.boxcdn.net.cdn.cloudflare.net	30.000000	F
+1527293088.184240	Cr32LU3bUGIFOYvRf3	fe80::4aba:4eff:fe85:4e36	5353	ff02::fb	5353	udp	0	-	hp officejet pro 8710 [854e33]._privet._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	TXT 9 txtvers=1 TXT 33 ty=HP OfficeJet Pro 8710 [854E33] TXT 5 note= TXT 37 url=https://www.google.com/cloudprint TXT 12 type=printer TXT 3 id= TXT 10 cs=offline	4500.000000	F
+1527293092.173808	C4Yrxc2AtAgwf7uf69	fe80::c3:7876:c853:1e85	5353	ff02::fb	5353	udp	0	-	946a07fa._sub._apple-mobdev2._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293092.175213	CCmrOSbNqGaidOKs	192.168.7.68	5353	224.0.0.251	5353	udp	0	-	946a07fa._sub._apple-mobdev2._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293104.377276	CQGqo01YwQwL539dd3	192.168.7.129	9435	192.168.7.254	53	udp	28151	0.008594	www.google.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	172.217.12.164	271.000000	F
+1527293104.377397	CdzLwi2KXeGDm8RdCh	192.168.7.129	38093	192.168.7.254	53	udp	35130	0.008995	www.google.com	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	0	2607:f8b0:4006:81a::2004	26.000000	F
+1527293129.348932	CzO8i62FHGWMCmIEKh	192.168.7.74	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293130.575034	CzO8i62FHGWMCmIEKh	192.168.7.74	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293129.654560	CP0OcjXYfwn8uQBhf	fe80::c6c:84fb:e1d8:db93	5353	ff02::fb	5353	udp	0	-	_companion-link._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	yitong\xe2\x80\x99s macbook pro._companion-link._tcp.local,TXT 20 model=MacBookPro11\x2c3 TXT 10 osxvers=17	4500.000000,4500.000000	F
+1527293129.658830	CmIiFNb7JYHMYld4	192.168.7.93	5353	224.0.0.251	5353	udp	0	-	_companion-link._tcp.local	-	-	-	-	0	NOERROR	T	F	F	F	0	yitong\xe2\x80\x99s macbook pro._companion-link._tcp.local,TXT 20 model=MacBookPro11\x2c3 TXT 10 osxvers=17	4500.000000,4500.000000	F
+1527293129.354517	Cu9tKF2AWYLVid0b73	fe80::c2a:fa3:97:616a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293130.578353	Cu9tKF2AWYLVid0b73	fe80::c2a:fa3:97:616a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293133.343196	Cu9tKF2AWYLVid0b73	fe80::c2a:fa3:97:616a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293142.572696	Cu9tKF2AWYLVid0b73	fe80::c2a:fa3:97:616a	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293142.561490	CS0RZe3Zndox1xsaKd	192.168.7.74	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293123.510733	C3tBId1qWWEe2HPeT	fe80::107b:1b91:b393:a76b	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293124.434296	C3tBId1qWWEe2HPeT	fe80::107b:1b91:b393:a76b	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293127.506234	C3tBId1qWWEe2HPeT	fe80::107b:1b91:b393:a76b	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293136.412385	C3tBId1qWWEe2HPeT	fe80::107b:1b91:b393:a76b	5353	ff02::fb	5353	udp	0	-	_airplay._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293138.564504	C3tBId1qWWEe2HPeT	fe80::107b:1b91:b393:a76b	5353	ff02::fb	5353	udp	0	-	_companion-link._tcp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293139.793712	C3tBId1qWWEe2HPeT	fe80::107b:1b91:b393:a76b	5353	ff02::fb	5353	udp	0	-	_companion-link._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293142.578229	C3tBId1qWWEe2HPeT	fe80::107b:1b91:b393:a76b	5353	ff02::fb	5353	udp	0	-	_companion-link._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293151.774193	C3tBId1qWWEe2HPeT	fe80::107b:1b91:b393:a76b	5353	ff02::fb	5353	udp	0	-	_companion-link._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293123.508513	CGYllPvtoIKTOgCR	192.168.7.94	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293124.431215	CGYllPvtoIKTOgCR	192.168.7.94	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293127.503049	CGYllPvtoIKTOgCR	192.168.7.94	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293136.410476	CGYllPvtoIKTOgCR	192.168.7.94	5353	224.0.0.251	5353	udp	0	-	_airplay._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293138.561672	CGYllPvtoIKTOgCR	192.168.7.94	5353	224.0.0.251	5353	udp	0	-	_companion-link._tcp.local	32769	qclass-32769	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293139.790862	CGYllPvtoIKTOgCR	192.168.7.94	5353	224.0.0.251	5353	udp	0	-	_companion-link._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293142.575151	CGYllPvtoIKTOgCR	192.168.7.94	5353	224.0.0.251	5353	udp	0	-	_companion-link._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1527293151.771398	CGYllPvtoIKTOgCR	192.168.7.94	5353	224.0.0.251	5353	udp	0	-	_companion-link._tcp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+#close	2018-05-25-17-20-35
