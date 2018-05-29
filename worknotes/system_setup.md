@@ -2,6 +2,7 @@ This is a walk through note for the data flow, 2018/05/24. Contact info: weihua1
 
 ### platform: multiple vms
 
+Setup VM: 192.168.7.2, administrator@vsphere.local, Helios123$ <br />
 To check system healthiness with chassis manager, go to http://192.168.7.8:8500 <br />
 To monitor the data flow with Kibana, go to http://192.168.7.11:5601 <br />
 
