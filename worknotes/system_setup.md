@@ -56,6 +56,7 @@ docker exec -it docker_db_1 bash
 psql -U helios helios
 \dt
 select * from conn limit 5;
+drop schema public cascade;
 ```
 
 ### Clear reset
