@@ -57,3 +57,27 @@ psql -U helios helios
 \dt
 select * from conn limit 5;
 ```
+
+### Clear reset
+delete all containers and images: <br />
+```bash
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+```
+
+### 20180529
+Install go and golint: <br />
+```bash
+yum install go -y
+go get -u golang.org/x/lint/golint
+```
+
+### Data flow
+Define the logs that can be sent to kafka from bro: <br />
+https://github.com/jjyy1946/helios/blob/master/helios/bro/kafka.bro <br />
+
+Define the topics that have been created in kafka: <br />
+https://github.com/jjyy1946/helios/blob/master/helios/kafka/env <br />
+
+Define the topics in kafka that been parsed by logstash: <br />
+https://github.com/jjyy1946/helios/blob/master/helios/logstash/logstash.conf <br />
