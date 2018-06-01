@@ -1,3 +1,4 @@
 jupyternotebooks/.ipynb_checkpoints/*
 pcap/*
 worknotes/brolog/.state/*
+data/*
