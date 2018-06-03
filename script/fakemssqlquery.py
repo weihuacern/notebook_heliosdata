@@ -5,10 +5,13 @@ import names
 import random
 import time
 
-class mssqldbfakequery:
+class sqldbfakequery:
 
-    def __init__(self, hostip, usrname, pwd, dbname):
-        self.conn = pymssql.connect(hostip, usrname, pwd, dbname)
+    def __init__(self, mode, hostip, usrname, pwd, dbname):
+        if mode == "mssql":
+            self.conn = pymssql.connect(hostip, usrname, pwd, dbname)
+        elif mode == "mysql":
+            self.conn = pymysql.connect(host=hostip, user=usrname, password=pwd, db=dbname)
     
     def fakesql(self, tablename):
         colnames = ["firstname", "lastname", "birthdate", "gender", "country", "street", "city", "stateprovince", "latitude", "rd1", "rd2", "rd3"]
@@ -26,9 +29,10 @@ class mssqldbfakequery:
             c.execute(self.fakesql("TBL_1"))
         return
     
-if __name__ == "__main__":    
-    mymssqldbfakequery = mssqldbfakequery("192.168.7.85", "SA", "Helios123", "WILFRED")
+if __name__ == "__main__":
+    mysqldbfakequery = sqldbfakequery("mssql", "192.168.7.155", "SA", "Helios123", "WILFRED")
 
     while 1:
-        mymssqldbfakequery.fakequerypii(1)
+        mysqldbfakequery.fakequerypii(1)
         time.sleep(random.gauss(10, 3.0))
+        #time.sleep(random.gauss(2, 1.0))
