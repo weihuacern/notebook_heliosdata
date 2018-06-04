@@ -5,7 +5,9 @@
 ```
 helios/consul/0.X/Dockerfile:ENV CONSUL_VERSION=1.0.2
 wget https://releases.hashicorp.com/consul/1.0.2/consul_1.0.2_linux_amd64.zip
+consul kv get -recurse
+consul kv delete -recurse
 ```
 
 - Make source.json and put it into consul KV store. <br />
-- Run scanner and make it know the source. <br />
+- Run scanner and make it know the source. Note: Do not touch the scanner configuration!!!! <br />
