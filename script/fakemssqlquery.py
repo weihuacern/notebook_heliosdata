@@ -20,13 +20,6 @@ class sqldbfakequery:
             self.conn = pymysql.connect(host=self.hostip, user=self.usrname, password=self.pwd, db=self.dbname)
     
     def fakesql(self, tablename, colnames, cutopt):
-        #if self.mode == "mssql":
-        #    colnames = ["firstname", "lastname", "birthdate", "gender", "country", "street", "city", "stateprovince", "latitude", "rd1", "rd2", "rd3"]
-        #    cutopt = ["gender = 'male'", "gender = 'female'", "stateprovince = 'USA'", "gender = 'PA'"]
-        #elif self.mode == "mysql":
-        #    colnames = ["firstname", "lastname", "birthdate", "gender", "country", "street", "city", "stateprovince", "latitude", "rd1", "rd2", "rd3"]
-        #    cutopt = ["gender = 'male'", "gender = 'female'", "stateprovince = 'USA'", "gender = 'PA'"]
-
         selcol = ", ".join(set([colnames[random.randint(0, len(colnames)-1)] for i in range(3)]))
         if cutopt:
             cutstr = " where " + cutopt[random.randint(0, len(cutopt)-1)]
@@ -37,19 +30,26 @@ class sqldbfakequery:
         return sqlstr
     
     def fakequerypii(self, cnt):
-        c = self.conn.cursor()
+        if self.mode == "mssql":
+            conn = pymssql.connect(self.hostip, self.usrname, self.pwd, self.dbname)
+        elif self.mode == "mysql":
+            conn = pymysql.connect(host=self.hostip, user=self.usrname, password=self.pwd, db=self.dbname)
+
+        c = conn.cursor()
         tabnames = ["pii_2nd", "pii_3rd", "pii_4th"]
-        sqlparas = {"pii_2nd": (["firstname", "lastname", "gender"], ["gender = 'male'", "gender = 'female'"]), "pii_3rd": (["phonenumber", "email"], []), "pii_4th": (["country", "city", "stateprovince"], ["country = 'CHN'", "country = 'USA'"])}
+        sqlparas = {"pii_2nd": (["firstname", "lastname", "gender", "tab2col1", "tab2col2"], ["gender = 'male'", "gender = 'female'"]), "pii_3rd": (["phonenumber", "email", "tab3col1", "tab3col2"], []), "pii_4th": (["country", "city", "stateprovince", "tab4col1", "tab4col2"], ["country = 'CHN'", "country = 'USA'"])}
         for i in range(cnt):
             thistabstr = tabnames[random.randint(0, len(tabnames)-1)]
             #self.fakesql(thistabstr, sqlparas[thistabstr][0], sqlparas[thistabstr][1])
             c.execute(self.fakesql(thistabstr, sqlparas[thistabstr][0], sqlparas[thistabstr][1]))
+            time.sleep(abs(random.gauss(1, 0.3)))
+        conn.close()
         return
     
 if __name__ == "__main__":
     mysqldbfakequery = sqldbfakequery("mssql", "192.168.7.155", "SA", "Helios123", "huaPIITest")
     #mysqldbfakequery = sqldbfakequery("mysql", "192.168.7.21", "root", "Helios123", "huaPIITest")
     while 1:
-        mysqldbfakequery.fakequerypii(1)
+        mysqldbfakequery.fakequerypii(5)
         time.sleep(abs(random.gauss(10, 3.0)))
         #time.sleep(abs(random.gauss(1, 0.3)))
