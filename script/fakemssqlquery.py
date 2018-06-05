@@ -1,6 +1,7 @@
 import re
 import random
 import time
+import hashlib
 from sqlalchemy.sql import text
 from sqlalchemy import create_engine
 import pymssql
