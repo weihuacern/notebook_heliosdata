@@ -2,8 +2,6 @@ import re
 import random
 import time
 import hashlib
-from sqlalchemy.sql import text
-from sqlalchemy import create_engine
 import pymssql
 import pymysql
 import names
@@ -63,8 +61,7 @@ class sqldbfakequery:
                 for x in thisvalue:
                     values += x
             values = [x.strip().strip("'") for x in values if x]
-
-        return colnames, values
+            return colnames, values
 
     def fakequerypii(self, cnt):
         if self.mode == "mssql":

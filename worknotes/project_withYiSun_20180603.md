@@ -21,3 +21,20 @@ consul_host=192.168.7.5
 ```
 
 Build a finite state machine for ETL, then make output to the Kibana. <br />
+
+Mock the environment, fake sql queries... <br />
+- my local mac, aok
+- 192.168.7.114 (hua test vm, CentOS), aok
+- 192.168.7.14, pending
+- 192.168.7.15, pending
+- 192.168.7.16, pending
+- 192.168.7.17, pending
+
+```
+yum -y install vim*
+yum install gcc
+yum install freetds-devel
+pip3.6 install pymssql
+pip3.6 install pymysql
+pip3.6 install names
+```
