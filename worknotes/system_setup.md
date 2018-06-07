@@ -11,6 +11,8 @@ make install INSTALL_TYPE=collector INSTALL_ADDR=192.168.7.18
 To check system healthiness with chassis manager, go to http://192.168.7.8:8500 <br />
 To monitor the data flow with Kibana, go to http://192.168.7.11:5601 <br />
 
+Update since June 7th, 2018: root, haie123 (192.168.7.3 or 192.168.7.4) <br />
+
 ### platform: personal vm, single machine
 VMWare, CentOS. 192.168.7.114. <br />
 
