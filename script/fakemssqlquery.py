@@ -82,7 +82,8 @@ class sqldbfakequery:
         return
     
 if __name__ == "__main__":
-    mysqldbfakequery = sqldbfakequery("mssql", "192.168.7.155", "SA", "Helios123", "huaPIITest")
+    #mysqldbfakequery = sqldbfakequery("mssql", "192.168.7.155", "SA", "Helios123", "huaPIITest")
+    mysqldbfakequery = sqldbfakequery("mssql", "192.168.7.134", "SA", "Helios12$", "huaPIITest")
     #mysqldbfakequery = sqldbfakequery("mysql", "192.168.7.21", "root", "Helios123", "huaPIITest")
     while 1:
         mysqldbfakequery.fakequerypii(random.randint(1, 10))
