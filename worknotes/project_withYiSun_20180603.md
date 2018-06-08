@@ -46,3 +46,5 @@ https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-s
 /var/www/html
 http://192.168.7.155/PIIFormTest/
 ```
+
+bro logs: /opt/helios/bro/spool/bro <br />

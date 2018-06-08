@@ -8,7 +8,6 @@ class formhttpfakeget:
         self.hostip = hostip
         self.directory = directory
         self.filelist = filelist
-        #"http://192.168.7.155/PIIFormTest/"
 
     def fakecurl(self, fname):
         curlcmd = "curl -O http://" + self.hostip + "/" + self.directory + "/" + fname
@@ -17,7 +16,7 @@ class formhttpfakeget:
     def fakehttppii(self, cnt):
         for i in range(cnt):
             thishttpreq = self.fakecurl(self.filelist[random.randint(0, len(self.filelist)-1)])
-            #print(thishttpreq)
+            print(thishttpreq)
             os.system(thishttpreq)
             time.sleep(abs(random.gauss(1, 0.3)))
 
