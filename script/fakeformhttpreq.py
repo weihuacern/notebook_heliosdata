@@ -22,7 +22,8 @@ class formhttpfakeget:
 
 if __name__ ==  "__main__":
 
-    myformhttpfakeget = formhttpfakeget("192.168.7.155", "PIIFormTest", ["form1.pdf", "form2.pdf", "form3.pdf", "form4.pdf", "form5.pdf"])
+    #myformhttpfakeget = formhttpfakeget("192.168.7.155", "PIIFormTest", ["form1.pdf", "form2.pdf", "form3.pdf", "form4.pdf", "form5.pdf"])
+    myformhttpfakeget = formhttpfakeget("192.168.7.134", "PIIFormTest", ["form1.pdf", "form2.pdf", "form3.pdf", "form4.pdf", "form5.pdf"])
 
     while 1:
         myformhttpfakeget.fakehttppii(random.randint(1, 10))
