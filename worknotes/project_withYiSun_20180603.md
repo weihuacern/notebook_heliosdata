@@ -43,6 +43,7 @@ pip3.6 install names
 Setup Web sever: <br />
 ```
 https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04
+https://www.linode.com/docs/web-servers/apache/install-and-configure-apache-on-centos-7/
 /var/www/html
 http://192.168.7.155/PIIFormTest/
 ```

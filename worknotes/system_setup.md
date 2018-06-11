@@ -2,6 +2,7 @@ This is a walk through note for the data flow, 2018/05/24. Contact info: weihua1
 
 ### platform: multiple vms
 
+HuaTestServer: 192.168.7.114, Password: 0*867#16?6 <br />
 Setup VM: 192.168.7.2, administrator@vsphere.local, Helios123$ <br />
 
 ```
