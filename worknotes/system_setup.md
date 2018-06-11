@@ -1,6 +1,6 @@
 This is a walk through note for the data flow, 2018/05/24. Contact info: weihua19900704@gmail.com <br />
 
-### platform: multiple vms
+### platform: multiple VMs
 
 HuaTestServer: 192.168.7.114, Password: 0*867#16?6 <br />
 Setup VM: 192.168.7.2, administrator@vsphere.local, Helios123$ <br />
@@ -13,6 +13,17 @@ To check system healthiness with chassis manager, go to http://192.168.7.8:8500 
 To monitor the data flow with Kibana, go to http://192.168.7.11:5601 <br />
 
 Update since June 7th, 2018: root, haie123 (192.168.7.3 or 192.168.7.4) <br />
+
+Rest the whole system by June 11th, 2018: <br />
+
+| Node name                          | Hypervisor | CPU | Memory | Storage |
+|------------------------------------|------------|-----|--------|---------|
+|management-192.168.7.14             | 192.168.7.4|  2  |   4GB  |   32GB  |
+|connector-192.168.7.15              | 192.168.7.3|  2  |   4GB  |   32GB  |
+|collector-192.168.7.16              | 192.168.7.3|  2  |   4GB  |   32GB  |
+|analytics-192.168.7.17              | 192.168.7.3|  2  |   4GB  |  128GB  |
+|machine-learning-engine-192.168.7.18| 192.168.7.3|  2  |   4GB  |  128GB  |
+|collector-192.168.7.19              | 192.168.7.4|  2  |   4GB  |   32GB  |
 
 ### platform: personal vm, single machine
 VMWare, CentOS. 192.168.7.114. <br />
