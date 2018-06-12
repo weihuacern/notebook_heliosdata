@@ -7,7 +7,12 @@ Setup VM: 192.168.7.2, administrator@vsphere.local, Helios123$ <br />
 
 ```
 dhclient ens192
-make install INSTALL_TYPE=collector INSTALL_ADDR=192.168.7.18
+make install INSTALL_TYPE=management INSTALL_ADDR=192.168.7.14
+make install INSTALL_TYPE=connector INSTALL_ADDR=192.168.7.15
+make install INSTALL_TYPE=collector INSTALL_ADDR=192.168.7.16
+make install INSTALL_TYPE=analytics INSTALL_ADDR=192.168.7.17
+make install INSTALL_TYPE=mle INSTALL_ADDR=192.168.7.18
+make install INSTALL_TYPE=collector INSTALL_ADDR=192.168.7.19
 ```
 To check system healthiness with chassis manager, go to http://192.168.7.8:8500 <br />
 To monitor the data flow with Kibana, go to http://192.168.7.11:5601 <br />
