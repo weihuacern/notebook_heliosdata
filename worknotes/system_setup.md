@@ -13,6 +13,7 @@ make install INSTALL_TYPE=collector INSTALL_ADDR=192.168.7.16
 make install INSTALL_TYPE=analytics INSTALL_ADDR=192.168.7.17
 make install INSTALL_TYPE=mle INSTALL_ADDR=192.168.7.18
 make install INSTALL_TYPE=collector INSTALL_ADDR=192.168.7.19
+bin/x-pack/setup-passwords interactive
 ```
 To check system healthiness with chassis manager, go to http://192.168.7.8:8500 <br />
 To monitor the data flow with Kibana, go to http://192.168.7.11:5601 <br />
