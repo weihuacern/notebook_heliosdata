@@ -2,11 +2,27 @@ This is a walk through note for the data flow, 2018/05/24. Contact info: weihua1
 
 ### platform: multiple VMs
 
-HuaTestServer: 192.168.7.114, Password: 0*867#16?6 <br />
-Setup VM: 192.168.7.2, administrator@vsphere.local, Helios123$ <br />
+Hua-test-192.168.7.114, Password: 0*867#16?6 <br />
+Hua-test-192.168.7.143
+- Setup VMs at vCenter: 192.168.7.2, administrator@vsphere.local, Helios123$ <br />
+New vCenter: 192.168.7.98, administrator@vsphere.local, Helios12$ <br />
+Setup the whole system in hybrid mode: mgmt and one collector on one hypervisor, the second collector, connector, analytics and mle on the other hypervisor. <br />
+For collector, it need to get access to both management interface and traffic interface. Therefore we need to configure two different port groups with two VMNICs for the collector VMs before we install and configure with wizard. <br />
 
-```
+Some notes to setup ip after VM and Ops installed: <br />
+```bash
 dhclient ens192
+/etc/sysconfig/network-scripts/ifcfg-ens192
+```
+
+- Seup all VMs with corresponding docker composes. management go first, then connector, then collectors, then analytics or mle. <br />
+Some special tips: 
+    - The docker_install.sh, it is very likely to get timeout at the step to add docker.repo into yum. If this happens, install doecker by hand first. <br />
+    - Keep an eye on the installation log, make sure every step have been processed sucessfully. <br />
+    - Also, make sure to type in the password in time, otherwise we will have certification failure. <br />
+    - Go to the 
+
+```bash
 make install INSTALL_TYPE=management INSTALL_ADDR=192.168.7.14
 make install INSTALL_TYPE=connector INSTALL_ADDR=192.168.7.15
 make install INSTALL_TYPE=collector INSTALL_ADDR=192.168.7.16
