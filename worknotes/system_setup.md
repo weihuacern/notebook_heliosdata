@@ -3,7 +3,8 @@ This is a walk through note for the data flow, 2018/05/24. Contact info: weihua1
 ### platform: multiple VMs
 
 Hua-test-192.168.7.114, Password: 0*867#16?6 <br />
-Hua-test-192.168.7.143
+
+Install from Hua-test-192.168.7.143 <br />
 - Setup VMs at vCenter: 192.168.7.2, administrator@vsphere.local, Helios123$ <br />
 New vCenter: 192.168.7.98, administrator@vsphere.local, Helios12$ <br />
 Setup the whole system in hybrid mode: mgmt and one collector on one hypervisor, the second collector, connector, analytics and mle on the other hypervisor. <br />
@@ -47,6 +48,7 @@ Rest the whole system by June 11th, 2018: <br />
 |collector-192.168.7.19              | 192.168.7.4|  2  |   4GB  |   32GB  |
 
 Note, We need to increase the collector size to 64GB, due to the large fuzzy app. <br />
+The other 2 sets are coming with 192.168.7.30 and 192.168.7.31. One set with 7.44 to 7.49, the other are 7.54 to 7.59. <br /> 
 
 ### platform: personal vm, single machine
 VMWare, CentOS. 192.168.7.114. <br />
