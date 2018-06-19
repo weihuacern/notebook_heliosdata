@@ -15,12 +15,11 @@ dhclient ens192
 /etc/sysconfig/network-scripts/ifcfg-ens192
 ```
 
-- Seup all VMs with corresponding docker composes. management go first, then connector, then collectors, then analytics or mle. <br />
+- Setup all VMs with corresponding docker composes. management go first, then connector, then collectors, then analytics or mle. <br />
 Some special tips: 
-    - The docker_install.sh, it is very likely to get timeout at the step to add docker.repo into yum. If this happens, install doecker by hand first. <br />
-    - Keep an eye on the installation log, make sure every step have been processed sucessfully. <br />
+    - The docker_install.sh, it is very likely to get timeout at the step to add docker.repo into yum. If this happens, install docker by hand first. <br />
+    - Keep an eye on the installation log, make sure every step have been processed successfully. <br />
     - Also, make sure to type in the password in time, otherwise we will have certification failure. <br />
-    - Go to the 
 
 ```bash
 make install INSTALL_TYPE=management INSTALL_ADDR=192.168.7.14
@@ -47,13 +46,15 @@ Rest the whole system by June 11th, 2018: <br />
 |machine-learning-engine-192.168.7.18| 192.168.7.3|  2  |   4GB  |  128GB  |
 |collector-192.168.7.19              | 192.168.7.4|  2  |   4GB  |   32GB  |
 
+Note, We need to increase the collector size to 64GB, due to the large fuzzy app. <br />
+
 ### platform: personal vm, single machine
 VMWare, CentOS. 192.168.7.114. <br />
 
 ### platform setup
 
 #### clear network environment
-Note, CentOS will firewall will pick up back the ip/port rules from time to time... So disable it and then flush iptable. <br />
+Note, CentOS will firewall will pick up back the ip/port rules from time to time... So disable it and then flush ip-table. <br />
 ```
 systemctl disable firewalld
 iptables -F
@@ -82,7 +83,7 @@ sudo ./start_local.sh run
 ```
 We should have all containers running. <br />
 
-### pcap workflow
+### pcap work-flow
 process your pcap file with collector container: <br />
 ```bash
 cp youpcapfile.pcap /opt/helios/bro/spool/
@@ -90,7 +91,7 @@ docker exec -it collector bash
 bro -r /usr/local/spool/youpcapfile.pcap /usr/local/share/bro/site/local.bro
 ```
 
-check ELK log processing workflow with Kibana: go to browser, 192.168.7.114. user name: elastic, password: helios12$ <br />
+check ELK log processing work-flow with Kibana: go to browser, 192.168.7.114. user name: elastic, password: helios12$ <br />
 check the log processing result in postgre db: <br />
 ```bash
 docker exec -it docker_db_1 bash
@@ -115,7 +116,7 @@ go get -u golang.org/x/lint/golint
 ```
 
 ### Data flow
-Define the logs that can be sent to kafka from bro: <br />
+Define the logs that can be sent to Kafka from bro: <br />
 https://github.com/jjyy1946/helios/blob/master/helios/bro/kafka.bro <br />
 
 Define the topics that have been created in kafka: <br />
