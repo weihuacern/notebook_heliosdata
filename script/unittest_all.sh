@@ -2,7 +2,7 @@
 export PYTHONPATH=/root/helios/helios/app/
 
 directory="/root/helios/helios/app/test/"
-suffix="'*_test.py'"
+suffix="'test_*.py'"
 
 declare -a fname_arr=(`eval find $directory -type f -name $suffix`)
 
