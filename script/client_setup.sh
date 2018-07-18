@@ -8,7 +8,6 @@ sudo yum install yum-utils
 sudo yum install net-tools
 sudo yum groupinstall development
 
-
 sudo yum install https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum install python36u
 
@@ -16,7 +15,9 @@ sudo yum install python36u-pip
 sudo yum install python36u-devel
 
 pip3.6 install names
+sudo yum install gcc
 sudo yum install freetds-devel
+sudo yum install python36u-devel
 pip3.6 install pymssql
 pip3.6 install pymysql
 
