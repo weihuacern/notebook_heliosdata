@@ -90,6 +90,7 @@ if __name__ == "__main__":
     #mysqldbfakequery = sqldbfakequery("mssql", "192.168.8.74", "SA", "Helios12$", ["huaPIITest00"])
     #mysqldbfakequery = sqldbfakequery("mssql", "192.168.8.74", "SA", "Helios12$", ["huaPIITest10"])
     #mysqldbfakequery = sqldbfakequery("mssql", "192.168.8.75", "SA", "Helios12$", ["huaPIITest01"])
+    #mysqldbfakequery = sqldbfakequery("mysql", "192.168.8.74", "root", "Helios123", ["course", "eval", "registration"])
 
     while 1:
         mysqldbfakequery.fakequerypii(random.randint(1, 10))
