@@ -1,6 +1,6 @@
 This is a walk through note for the data flow, 2018/05/24. Contact info: weihua19900704@gmail.com <br />
 
-### platform: multiple VMs
+### Platform: multiple VMs
 
 Hua-test-192.168.7.114, Password: 0*867#16?6 <br />
 
@@ -50,25 +50,25 @@ Rest the whole system by June 11th, 2018: <br />
 Note, We need to increase the collector size to 64GB, due to the large fuzzy app. <br />
 The other 2 sets are coming with 192.168.7.30 and 192.168.7.31. One set with 7.44 to 7.49, the other are 7.54 to 7.59. <br /> 
 
-### platform: personal vm, single machine
+### Platform: personal vm, single machine
 VMWare, CentOS. 192.168.7.114. <br />
 
-### platform setup
+### Platform setup
 
-#### clear network environment
+#### CentOS firewall disable
 Note, CentOS will firewall will pick up back the ip/port rules from time to time... So disable it and then flush ip-table. <br />
 ```
 systemctl disable firewalld
 iptables -F
 ```
 
-#### git
+#### Git
 ```bash
 sudo yum install git
 ```
 Then set up ssh key on the vm following [this link](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [this link](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/). <br />
 
-#### docker
+#### Docker
 ```bash
 cd ~
 git clone git@github.com:yourgithubid/helios.git
@@ -76,7 +76,7 @@ cd helios/helios/platform
 sudo ./docker_install.sh Linux x86_64
 ```
 
-### containers setup
+#### Container setup
 ```bash
 cd ~
 cd helios/
@@ -85,7 +85,7 @@ sudo ./start_local.sh run
 ```
 We should have all containers running. <br />
 
-### pcap work-flow
+#### Pcap work-flow
 process your pcap file with collector container: <br />
 ```bash
 cp youpcapfile.pcap /opt/helios/bro/spool/
@@ -103,21 +103,21 @@ select * from conn limit 5;
 drop schema public cascade;
 ```
 
-### Clear reset
+#### Clean up everything
 delete all containers and images: <br />
 ```bash
 docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
 ```
 
-### 20180529
+#### Golang setup
 Install go and golint: <br />
 ```bash
 yum install go -y
 go get -u golang.org/x/lint/golint
 ```
 
-### Data flow
+#### Data flow
 Define the logs that can be sent to Kafka from bro: <br />
 https://github.com/jjyy1946/helios/blob/master/helios/bro/kafka.bro <br />
 
@@ -126,3 +126,8 @@ https://github.com/jjyy1946/helios/blob/master/helios/kafka/env <br />
 
 Define the topics in kafka that been parsed by logstash: <br />
 https://github.com/jjyy1946/helios/blob/master/helios/logstash/logstash.conf <br />
+
+#### Customized build without Jenkins
+
+https://github.com/jjyy1946/helios/blob/master/helios/docker/.env <br />
+Change Dockerfile-update to Dockerfile <br />

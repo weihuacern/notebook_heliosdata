@@ -8,7 +8,7 @@ MODE_TAGS_DICT = {
     "SALES_MANAGER": ["set_sales", "set_customer", "check_sales", "check_customer", \
                       "set_employee", "check_employee", "check_payroll"],
     "SALES_GENERAL": ["set_customer", "check_sales", "check_customer", \
-                      "set_employee", "check_employee", "check_payroll"],
+                      "check_employee", "check_payroll"],
 }
 
 TAG_APP_DICT = {
@@ -16,14 +16,22 @@ TAG_APP_DICT = {
     "set_payroll": ("cgi-bin/set_payroll.py", "?eid=123&payment=10000&title=SDE"),
     "set_performance": ("cgi-bin/set_performance.py", "?eid=123&bonus=5000&attendance=50"),
     "set_sales": ("cgi-bin/set_sales.py", "?eid=123&name=Jack Pitts&cids=1001"),
-    "set_customer": ("cgi-bin/set_customer.py", "?cid=123&contact=2345678901&trade=book"),
+    "set_customer": ("cgi-bin/set_customer.py", "?cid=1001&contact=2345678901&trade=book"),
     "check_employee": ("cgi-bin/check_employee_info.py", "?eid=123"),
     "check_payroll": ("cgi-bin/check_payroll.py", "?eid=123"),
     "check_performance": ("cgi-bin/check_performance.py", "?eid=123"),
     "check_sales": ("cgi-bin/check_sales.py", "?eid=123"),
     "check_customer": ("cgi-bin/check_customer.py", "?cid=123"),
 }
+'''
+EID_COLS_LIST = [
+    {"eid": 0001, "name": , "phone": , "payment": , "title": , "bonus": , "attendance": , "cids": },
+]
 
+CID_COLS_LIST = [
+    {"cid": 5001, "contact": , "trade": },
+]
+'''
 if __name__ == "__main__":
     mode = sys.argv[1]
     print("Script is running in mode: " + mode)
