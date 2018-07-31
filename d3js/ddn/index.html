@@ -5,15 +5,17 @@
 <meta http-equiv="expires" content="0"> 
 <meta http-equiv="pragma" content="no-cache">
 <link rel="shortcut icon" href="#" />
-<script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
 <style type="text/css">
+body {
+    background-color:#292b33
+}
 .link { stroke: #ccc; }
 .nodetext { pointer-events: none; font: 10px sans-serif; }
 </style>
 </head>
 <body>
 <h3><a href="http://stackoverflow.com/questions/10899725/d3-js-force-directed-graph-with-support-for-drag-and-drop-to-make-selected-node">http://stackoverflow.com/questions/10899725/d3-js-force-directed-graph-with-support-for-drag-and-drop-to-make-selected-node</a></h3>
-
 <script type="text/javascript">
 
 var w = 1000,
@@ -23,12 +25,12 @@ var vis = d3.select("body").append("svg:svg")
     .attr("width", w)
     .attr("height", h);
 
-d3.json("d3js_ddn_pii.json", function(json) {
+d3.json("d3js_ddn_hr.json", function(json) {
     var force = self.force = d3.layout.force()
         .nodes(json.nodes)
         .links(json.links)
         .gravity(.05)
-        .distance(100)
+        .distance(function(d) { return 15*d.label.length; })
         .charge(-100)
         .size([w, h])
         .start();
@@ -41,6 +43,36 @@ d3.json("d3js_ddn_pii.json", function(json) {
         .attr("y1", function(d) { return d.source.y; })
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
+
+    var link_path = vis.selectAll(".link_path")
+        .data(json.links)
+        .enter()
+        .append('path')
+        .attr({'d': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
+               'class':'link_path',
+               'fill-opacity':0,
+               'stroke-opacity':0,
+               'fill':'blue',
+               'stroke':'red',
+               'id':function(d,i) {return 'link_path'+i}})
+        .style("pointer-events", "none");
+
+    var link_label = vis.selectAll(".link_label")
+        .data(json.links)
+        .enter()
+        .append('text')
+        .style("pointer-events", "none")
+        .attr({'class': 'link_label',
+               'id': function(d,i){return 'link_label '+i},
+               'dx': 80,
+               'dy': 0,
+               'font-size':10,
+               'fill':'#ffffff'});
+
+    link_label.append('textPath')
+        .attr('xlink:href',function(d,i) {return '#link_path'+i})
+        .style("pointer-events", "none")
+        .text(function(d,i){return d.label});
 
     var node_drag = d3.behavior.drag()
         .on("dragstart", dragstart)
@@ -65,16 +97,22 @@ d3.json("d3js_ddn_pii.json", function(json) {
         force.resume();
     }
 
-
     var node = vis.selectAll("g.node")
         .data(json.nodes)
         .enter().append("svg:g")
         .attr("class", "node")
         .call(node_drag);
 
+    var group_icon_dict = {
+        "application": "icon/cog.svg",
+        "user": "icon/user.svg",
+        "database": "icon/cloud-sync.svg",
+        "table": "icon/database.svg"
+    };
+
     node.append("svg:image")
         .attr("class", "circle")
-        .attr("xlink:href", "https://github.com/favicon.ico")
+        .attr("xlink:href", function(d,i){return group_icon_dict[d.group]})
         .attr("x", "-8px")
         .attr("y", "-8px")
         .attr("width", "16px")
@@ -84,6 +122,7 @@ d3.json("d3js_ddn_pii.json", function(json) {
         .attr("class", "nodetext")
         .attr("dx", 12)
         .attr("dy", ".35em")
+        .append("svg:tspan").style("fill","#ffffff")
         .text(function(d) { return d.name });
 
     force.on("tick", tick);
@@ -94,9 +133,22 @@ d3.json("d3js_ddn_pii.json", function(json) {
             .attr("x2", function(d) { return d.target.x; })
             .attr("y2", function(d) { return d.target.y; });
         node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+        link_path.attr('d', function(d) { var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
+                                           //console.log(d)
+                                           return path});       
+        link_label.attr('transform',function(d,i){
+            if (d.target.x<d.source.x){
+                bbox = this.getBBox();
+                rx = bbox.x+bbox.width/2;
+                ry = bbox.y+bbox.height/2;
+                return 'rotate(180 '+rx+' '+ry+')';
+            }
+            else {
+                return 'rotate(0)';
+            }
+        });
     };
 });
-
 </script>
 </body>
 </html>
