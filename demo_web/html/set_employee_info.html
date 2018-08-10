@@ -1,0 +1,12 @@
+<form action="/cgi-bin/post_employee.py" method="POST">
+<p><strong>Register New Employee:</strong></p>
+<hr />
+<p>Employee ID <input name="eid" type="text" /> <br/> Name <input name="name" type="text" /> <br /> Phone Number <input name="phone" type="text" /></p>
+<input name="add" type="submit" value="Add" /></form>
+
+<hr />
+<p><strong>Upload File:</strong></p>
+<form id="uploadbanner" enctype="multipart/form-data" method="post" action="/cgi-bin/upload.cgi">
+	<input id="fileupload" name="file" type="file" /><br>
+   <input type="submit" value="submit" id="submit" />
+</form>
