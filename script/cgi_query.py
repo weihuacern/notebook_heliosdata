@@ -28,7 +28,10 @@ if __name__ == "__main__":
     mode = sys.argv[1]
     print("Script is running in mode: " + mode)
     print("Valid run modes are: " + ", ".join(MODE_TAGS_DICT.keys()))
-    ip = "192.168.7.100"
+    if mode == "HR":
+        ip = "192.168.7.100"
+    else:
+        ip = "192.168.7.173"
     try:
         tag_list = MODE_TAGS_DICT[mode]
     except KeyError:
