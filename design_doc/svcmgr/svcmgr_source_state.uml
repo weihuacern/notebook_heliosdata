@@ -1,0 +1,31 @@
+@startuml
+
+title Life cycle of a Source on the Service Manager and Scanner
+
+[*] -> SourceInSVCMGR: DoSaveSource
+state SourceInSVCMGR {
+  [*] --> SourceNew
+  SourceNew --> SourceInJobMap: DoConnectionTest, JobMap.InsertJob
+  SourceNew --> SourceConnTestFailed: DoConnectionTest
+  SourceInJobMap --> [*]
+}
+
+SourceInSVCMGR --> SourceInScanner: JobMap.RunJob
+state SourceInScanner {
+  [*] --> SourceAssigned: ScannerAction.AddSource
+  [*] --> SourceAssignFailed: ScannerAction.AddSource
+  [*] --> SourceScanning: ScannerAction.OnDemandFullScan
+  [*] --> SourceScanned: ScannerAction.OnDemandFullScan
+  SourceAssigned --> SourceScanning: ScannerAction.OnDemandScan
+  SourceScanning --> SourceScanned: GetScanSource
+  SourceScanning --> SourceScanFailed: GetScanSource, ScannerAction.StopScan
+  SourceScanned --> SourceScanning: ScannerAction.OnDemandFullScan
+  SourceAssignFailed --> [*]
+  SourceScanned --> [*]
+  SourceScanFailed --> [*]
+  SourceConnTestFailed --> [*]
+}
+
+SourceInScanner --> [*] : ScannerAction.DeleteSource
+ 
+@enduml
