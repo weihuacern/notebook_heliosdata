@@ -1,0 +1,22 @@
+@startuml
+
+title Life cycle of a Service on the Service Manager
+
+ServiceNew: No source belongs to this service
+ServicePending: any source belongs to this service in the job scheduler
+ServiceScanning: service is not in ServicePending,\n and any source belongs to this service in \n SourceNew, SourceAssigned or SourceScanning
+ServiceCompleted: all sources is in SourceScaned
+ServiceFailed: service is not in ServicePending or ServiceScanning,\n and any source belongs to this service in \n SourceConnTestFailed, SourceAssignFailed or SourceScanFailed
+
+[*] --> ServiceNew
+ServiceNew --> ServicePending: JobMap.InsertJob
+ServiceNew --> [*]
+ServicePending --> ServiceScanning
+ServicePending --> ServiceCompleted
+ServicePending --> ServiceFailed
+ServiceScanning --> ServiceCompleted
+ServiceScanning --> ServiceFailed
+ServiceCompleted --> [*]
+ServiceFailed --> [*]
+
+@enduml 
