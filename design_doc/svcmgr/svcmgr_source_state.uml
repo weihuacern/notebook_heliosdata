@@ -1,17 +1,30 @@
 @startuml
-
 title Life cycle of a Source on the Service Manager and Scanner
 
-[*] -> SourceInSVCMGR: DoSaveSource
+SourceInSVCMGR: Source status is dominant by svcmgr, \n after scanner action request from other services, \n before scan job leave job scheduler
+
+[*] -> SourceInSVCMGR
 state SourceInSVCMGR {
-  [*] --> SourceNew
+  SourceNew: New source generated
+  SourceInJobMap: Source stay in the job scheduler
+  SourceConnTestFailed: Connection test boardcast failed on this source for all scanners
+
+  [*] --> SourceNew: DoSaveSource
   SourceNew --> SourceInJobMap: DoConnectionTest, JobMap.InsertJob
   SourceNew --> SourceConnTestFailed: DoConnectionTest
   SourceInJobMap --> [*]
 }
 
+SourceInScanner: Source status is dominant by scanner, when source is not owned by svcmgr
+
 SourceInSVCMGR --> SourceInScanner: JobMap.RunJob
 state SourceInScanner {
+  SourceAssigned: Source assigned to scanner
+  SourceAssignFailed: Source failed to assign to scanner
+  SourceScanning: Source is being scanned
+  SourceScanned: Source has been scanned
+  SourceScanFailed: Source scan failed
+
   [*] --> SourceAssigned: ScannerAction.AddSource
   [*] --> SourceAssignFailed: ScannerAction.AddSource
   [*] --> SourceScanning: ScannerAction.OnDemandFullScan
@@ -27,5 +40,4 @@ state SourceInScanner {
 }
 
 SourceInScanner --> [*] : ScannerAction.DeleteSource
- 
 @enduml
