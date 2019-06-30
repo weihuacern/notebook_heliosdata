@@ -1,0 +1,35 @@
+Time: 2019-June-28 Friday
+Repo: git@github.com:HeliosData/helios.git
+
+All sizes are in kB's. The pack column is the size of the object, compressed, inside the pack file.
+size   pack   SHA                                       location
+65798  34173  2aa9827108d9776fb8867c0070a42f3bbec8bbf7  helios/app/PII_ML/FormLearning/tessdata/chi_tra.traineddata
+55357  25784  6de839a7ed1d5fd4e98bc69ce6dfda7493e7f0e7  helios/utils/GeoLite2-City.mmdb
+51428  27385  c58c6c172915a3d73a111dcb633557bfe48eb6fa  helios/app/PII_ML/FormLearning/tessdata/chi_sim.traineddata
+31126  16041  561883fac89c2b0c4923d9ddf5b1d1f69897fc1f  helios/app/PII_ML/FormLearning/tessdata/eng.traineddata
+19852  6117   819eb6a28abf114b776d8deab2ffe165ec051697  helios/svcmgr/svcmgr
+18301  5647   577c00835df00d07037fed621b49cbd7ae3028be  helios/manager/main
+18144  5597   1ab4878b27f73aeb33f4c52cc179ba9917451fa8  helios/scanner/api
+15055  7037   afa1f3ad05cd5c15edbf706c057eae3d59812643  helios/scanner/main
+14743  6283   8054c9ff753005cc5c376ec93dee5e0a7d9a5d3f  src/libs/libcrypto.a
+13947  8535   1d0dec92f227e6b18d1b00cff3f75e0dc3425003  helios/app/PII_ML/FormLearning/tessdata/ind.traineddata
+13344  4460   65b2e6698f53899def8235a09ee20e928e7a6471  helios/scanner/main
+10315  4206   527457ca8f8fe1fda7c2f88bce3c0e4be12be9d0  helios/app/PII_ML/FormLearning/tessdata/osd.traineddata
+10233  6953   fd5588f515cd1af81946266b70426294ed2158ce  helios/app/PII_ML/FormLearning/tessdata/enm.traineddata
+10156  2540   72bdac313835e79cc2baf3649f00a7ddba31cfe4  helios/eng-tools/bin/jsonnet_centos
+6474   1196   cda445f1a146e5a3b4bd74a1f902187be9e26acd  helios/ui/proj/static/js/bundle.js
+6155   2680   673c02b1ed4b54b781193c6d6d800a38335fcfee  helios/scanner/scanner
+5832   3284   41d7386cacc0faf19b381f9bba035cb3bcc7f8f9  helios/app/PII_ML/FormLearning/tessdata/HanS.traineddata
+5650   2530   900397dd00f83c11f9844573789b065c169186a0  helios/scanner/scanner
+5320   2812   ac3d896e23586bf88dc9278a019a435534b8db36  helios/app/PII_ML/FormLearning/tessdata/HanT_vert.traineddata
+5320   2816   ac8c8e97a2e75db8afd1a843527f350737973435  helios/app/PII_ML/FormLearning/tessdata/HanT.traineddata
+5302   2799   a0464cb0478f089f00cbfa715a15ba5aba5d0e37  helios/app/PII_ML/FormLearning/tessdata/HanS_vert.traineddata
+5276   978    44bc0c39e2db556ec1667ad585721295feae9a5b  helios/ui/proj/static/js/bundle.js.map
+5155   5008   872c69b2504c6b5ccb3f18bfe289a0b347006e3d  helios/app/PII_ML/FormLearning/pdf/form44.pdf
+5120   22     2929cf437c03c5ac537c4821b6bcbe897fb28e71  helios/app/test/vagrant.img
+5107   2954   f4744c201359d02ced6914c77f0de68ee9bbdd74  helios/app/PII_ML/FormLearning/tessdata/eng.traineddata
+5024   4913   f87e7d4825ff66b1308f2704643679600ed5a069  helios/app/PII_ML/FormLearning/pdf/form13.pdf
+4388   4282   4a189922d03c02579c8f0f7b3f19c03b17596152  helios/app/PII_ML/FormLearning/pdf/form14.pdf
+3564   3470   750f81d07f12cb4dd886716a7818614fdc7669f6  helios/app/PII_ML/FormLearning/pdf/form38.pdf
+2852   2414   8a0a9e43ac25986b64947f7fb541a22292d402c5  helios/app/PII_ML/FormCheck/form1.pdf
+2523   2089   832a4b3488bdfa6b6858292958c5c0a26f104291  helios/app/PII_ML/PII_IE/form9.pdf
