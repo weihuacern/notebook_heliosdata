@@ -1,0 +1,60 @@
+@startuml
+
+title Helios Data Platform configuration
+
+PlatformProtobuf: platform.proto
+PlatformEnvFile: env generate from platform.proto
+PlatformProtobufPython: Python wrapper for platform.proto
+PlatformProtobufGolang: Golang wrapper for platform.proto
+PlatformProtobufJavaScript: JavaScript wrapper for platform.proto
+
+ComponentApachSpark: PySpark job
+ComponentAPIServer: Django server for data query
+ComponentNLPServer: TLV server for Natural Language Processing
+ComponentFuzzyApp: Python app to fuzzy image
+ComponentWizard: Python app to configure system when booting up
+ComponentNetHardening: Python app to use firewalld to protect system
+
+ComponentSVCMGR: Golang gin server for chassis management
+ComponentScanner: Golang component to scan data store
+ComponentAuthServer: Golang gin server for authentication
+
+ComponentUI: NodeJS server for UI
+ComponentSharingServer: NodeJS for sharing server
+
+SystemComposeFile: docker compose file
+SystemCICD: Jenkins
+
+[*] --> PlatformProtobuf
+PlatformProtobuf --> PlatformEnvFile: compose.yml, Jenkins CD
+PlatformProtobuf --> PlatformProtobufPython
+PlatformProtobuf --> PlatformProtobufGolang
+PlatformProtobuf --> PlatformProtobufJavaScript
+PlatformEnvFile --> SystemComposeFile
+PlatformEnvFile --> SystemCICD
+PlatformProtobufPython --> ComponentApachSpark
+PlatformProtobufPython --> ComponentAPIServer
+PlatformProtobufPython --> ComponentNLPServer
+PlatformProtobufPython --> ComponentFuzzyApp
+PlatformProtobufPython --> ComponentWizard
+PlatformProtobufPython --> ComponentNetHardening
+PlatformProtobufGolang --> ComponentSVCMGR
+PlatformProtobufGolang --> ComponentScanner
+PlatformProtobufGolang --> ComponentAuthServer
+PlatformProtobufJavaScript --> ComponentUI
+PlatformProtobufJavaScript --> ComponentSharingServer
+SystemComposeFile --> [*]
+SystemCICD --> [*]
+ComponentApachSpark --> [*]
+ComponentAPIServer --> [*]
+ComponentNLPServer --> [*]
+ComponentFuzzyApp --> [*]
+ComponentWizard --> [*]
+ComponentNetHardening --> [*]
+ComponentSVCMGR --> [*]
+ComponentScanner --> [*]
+ComponentAuthServer --> [*]
+ComponentUI --> [*]
+ComponentSharingServer --> [*]
+
+@enduml 
