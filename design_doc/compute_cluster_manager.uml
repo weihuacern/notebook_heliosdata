@@ -1,0 +1,55 @@
+@startuml
+
+class ComputeClusterManager{
+	__ Public Methods __
+	-- Compute Cluster Management --
+	.. Cluster ..
+	+ create_cluster()
+	+ delete_cluster()
+	.. Node ..
+	+ create_node(node_cfg, is_master)
+	+ delete_node(node_cfg, is_master)
+	-- Application Management --
+	+ scheduling_applications()
+	+ submit_application_to_cluster(app_ep)
+	__ Private Methods __
+	-- Compute Cluster Management --
+    + __connect_node(node_cfg)
+	.. Provision ..
+	+ _provision_node(conn, is_master, node_cfg)
+	+ _unprovision_node(conn)
+	.. Configure ..
+	+ _configure_node(conn, is_master, node_cfg)
+	+ _setup_reconfigure_service(conn, node_cfg)
+	.. Orchestration ..
+	+ _bootup_node(conn, is_master)
+	+ _shutdown_node(conn, is_master)
+	-- Application Management --
+	+ _get_application_configuration(app_ep)
+	+ _launch_application_to_cluster(app_ep, app_cfg)
+}
+
+note top of ComputeClusterManager
+    Initialization and Public Methods:
+    mgr = ComputeClusterManager(cfg, src_dir) // Init class with cluster configuration and souce code path
+	mgr.create_cluster() // Deploy compute cluster accroding to the cluster
+	mgr.delete_cluster() // Remove compute cluster accroding to the cluster
+	mgr.create_node(node_cfg, is_master) // Deploy one node of compute cluster
+	mgr.delete_node(node_cfg, is_master) // Remove one node of compute cluster
+	mgr.scheduling_applications() // Submit applications with scheduling
+	mgr.submit_application_to_cluster(app_ep) // Submit one application with application endpoint
+end note
+
+note bottom of ComputeClusterManager
+    Private Methods:
+	self.__connect_node(node_cfg) // Given node config, Connect to a node, return connection session
+	self._provision_node(conn, is_master, node_cfg) // Given connection session, node type and node config, provision node
+	self._unprovision_node(conn) // Given connection session, unprovision node
+	self._configure_node(conn, is_master, node_cfg) // Given connection session, node type and node config, configure node
+	self._setup_reconfigure_service(conn, node_cfg) // Given connection session and node config, setup reconfiguration service
+	self._bootup_node(conn, is_master) // Given connection session and node type, boot up services on node
+	self._shutdown_node(conn, is_master) // Given connection session and node type, shutdown services on node
+	self._get_application_configuration(app_ep) // Given application endpoint, get application config
+	self._launch_application_to_cluster(app_ep, app_cfg) // Given application endpoint and application config, launch application
+end note
+@enduml
